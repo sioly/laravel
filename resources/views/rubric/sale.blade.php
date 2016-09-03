@@ -10,20 +10,18 @@
 	}
 ?>
 <?php
-	$article = DB::table('sale')->where('price','!=','')->paginate(18);
-	foreach ($article as $a)
-	{
-
-
-		if($a->file != ""){
-			echo '<div class="article col-md-4">'.'<img src="../upload/'.$a->file.'">'.'<a href="adgift/'.$a->id.'">'.$a->title.'</a>'.'</div>';
-		}else{
-			echo '<div class="article col-md-4">'.'<img src="../upload/notimg.png">'.'<a href="adgift/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+	?><div id="articlesale"><?php
+		$article = DB::table('sale')->where('price','!=','')->paginate(18);
+		foreach ($article as $a)
+		{
+			if($a->file != ""){
+				echo '<div class="article col-md-4">'.'<img src="../upload/'.$a->file.'">'.'<a href="adsale/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+			}else{
+				echo '<div class="article col-md-4">'.'<img src="../upload/notimg.png">'.'<a href="adsale/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+			}
 		}
-
-
-	}
-	echo $article->links();
+		echo $article->links();
+	?></div><?php
 ?>
 
 <div id="form" class="form">

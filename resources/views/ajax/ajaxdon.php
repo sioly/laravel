@@ -9,12 +9,12 @@ catch(Exception $e)
     die('Erreur : '.$e->getMessage());
 }
 			$article = $bdd->query("SELECT * FROM sale where price=''");
-			while ($donnees = $article->fetch())
+			while ($a = $article->fetch())
 			{
-				if($donnees['file'] != ""){
-					echo '<div class="picture">'.'<img src="../public/upload/'.$donnees['file'], '"<br/><a href="">'.$donnees['title'].'</a></div>';
+				if($a['file'] != ""){
+					echo '<div class="article col-md-4">'.'<img src="../upload/'.$a['file'].'">'.'<a href="adgift/'.$a['id'].'">'.$a['title'].'</a>'.'</div>';
 				}else{
-					echo '<div class="picture">'.'<img src="../public/images/notimg.png', '"<br/><a href="">'.$donnees['title'].'</a></div>';
+					echo '<div class="article col-md-4">'.'<img src="../upload/notimg.png">'.'<a href="adgift/'.$a['id'].'">'.$a['title'].'</a>'.'</div>';
 				}
 			}
 ?>

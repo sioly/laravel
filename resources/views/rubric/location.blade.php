@@ -12,20 +12,18 @@
 	}
 ?>
 <?php
-	$article = DB::table('location')->paginate(18);
-	foreach ($article as $a)
-	{
-
-
-		if($a->file != ""){
-			echo '<div class="article col-md-4">'.'<img src="../upload/'.$a->file.'">'.'<a href="adlocation/'.$a->id.'">'.$a->title.'</a>'.'</div>';
-		}else{
-			echo '<div class="article col-md-4">'.'<img src="../upload/notimg.png">'.'<a href="adlocation/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+	?><div id="articlelocation"><?php
+		$article = DB::table('location')->paginate(18);
+		foreach ($article as $a)
+		{
+			if($a->file != ""){
+				echo '<div class="article col-md-4">'.'<img src="../upload/'.$a->file.'">'.'<a href="adlocation/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+			}else{
+				echo '<div class="article col-md-4">'.'<img src="../upload/notimg.png">'.'<a href="adlocation/'.$a->id.'">'.$a->title.'</a>'.'</div>';
+			}
 		}
-
-
-	}
-	echo $article->links();
+		echo $article->links();
+	?></div><?php
 ?>
 
 <div id="form" class="form">

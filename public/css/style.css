@@ -1,0 +1,155 @@
+body {
+    font-family: 'Lato';
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+#menu{
+    margin-left:14px;
+}
+
+#form{
+    padding:15px;
+    margin:auto;
+    width:90%;
+    border-radius:10px;
+    display:none;
+    position:absolute;
+    top:15%;
+}
+
+.form{
+    background:rgba(0,0,0,0.9);
+    margin-left:4%!important;
+}
+
+#form label{
+    width:20%;
+    float:left;
+    margin-top:10px;
+    color:white;
+}
+
+#form input{
+    width:80%;
+    border-radius: 10px;
+    padding:3px;
+    margin-top:10px;
+}
+
+#form select{
+    width:80%;
+    border-radius: 10px;
+    padding:3px;
+    margin-top:15px;
+}
+
+#form textarea{
+    width:80%;
+    border-radius: 10px;
+    padding:3px;
+    margin-top:10px;
+}
+
+#form input[type=submit]{
+    display:block;
+    margin:auto;
+    width:50%;
+    margin-top:15px;
+}
+
+.article a{
+    text-align:center;
+    display:block;
+}
+
+.article img{
+    transition:1s;
+    margin:auto;
+    display:block;
+    border:1px solid black;
+    border-radius:50%;
+    padding:20px;
+    margin-top:5%;
+    width:222px;
+    height:222px;
+}
+
+.article img:hover{
+    transition:1s;
+    background:silver;
+}
+
+#form img{
+    width:1%;
+    float:right;
+    margin:auto;
+    display:block;
+}
+
+#update{
+    display:none;
+    width:50%;
+    margin:auto;
+    background:silver;
+}
+
+#update label{
+    width:15%;
+    float:left;
+    margin-top:10px;
+    color:white;
+}
+
+#update input{
+    width:70%;
+    border-radius: 10px;
+    padding:3px;
+    margin-top:10px;
+}
+
+#update textarea{
+    width:70%;
+    border-radius: 10px;
+    padding:3px;
+    margin-top:10px;
+}
+
+#update input[type=submit]{
+    display:block;
+    margin:auto;
+    width:50%;
+    margin-top:15px;
+}
+
+#ad{
+    background:rgba(0,0,0,0.2);
+    margin:auto;
+    width:50%;
+    border-radius:10px;
+    padding:10px;
+}
+
+#ad img{
+    width:50%;
+    margin:auto;
+    display:block;
+}
+
+#ad h3{
+    text-align: center;
+}
+
+#trajet_inter{
+    display:none;
+}
+
+#trajet_inter2{
+    display:none;
+}
+
+#drtour{
+    display:none;
+}

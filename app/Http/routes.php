@@ -69,4 +69,4 @@ Route::get('deletelocation/{id}', 'ManagementController@deletelocation');
 
 Route::get('deletepartners/{id}', 'ManagementController@deletepartners');
 
-Route::post('/search', 'ManagementController@search');
+Route::get('/search', 'ManagementController@search');

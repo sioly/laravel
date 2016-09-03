@@ -11,7 +11,7 @@
 				?><div id='edit'><?php
 				if(Auth::user()->id == $a->id_user){
 					?><a onClick="show('update')">Modifier</a><br/><?php
-					echo '<a href="../deletelocation/'.$id.'">Supprimer</a>';
+					?><a href="../deletelocation/<?php echo $id ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette entrée?'));">Supprimer</a><?php
 				}
 				?></div><?php
 			}else{
@@ -19,7 +19,7 @@
 				?><div id='edit'><?php
 				if(Auth::user()->id == $a->id_user){
 					?><a onClick="show('update')">Modifier</a><br/><?php
-					echo '<a href="../deletelocation/'.$id.'">Supprimer</a>';
+					?><a href="../deletelocation/<?php echo $id ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette entrée?'));">Supprimer</a><?php
 				}
 				?></div><?php
 			}

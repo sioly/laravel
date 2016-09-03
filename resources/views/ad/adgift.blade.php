@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('content')       
+@section('content')
+
 	<div id="ad">
 	<?php
 		$article = DB::table('sale')->where('id', $id)->get();
@@ -11,7 +12,7 @@
 				?><div id='edit'><?php
 				if(Auth::user()->id == $a->id_user){
 					?><a onClick="show('update')">Modifier</a><br/><?php
-					echo '<a href="../deletegift/'.$id.'">Supprimer</a>';
+					?><a href="../deletegift/<?php echo $id ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette entrée?'));">Supprimer</a><?php
 				}
 				?></div><?php
 			}else{
@@ -19,7 +20,7 @@
 				?><div id='edit'><?php
 				if(Auth::user()->id == $a->id_user){
 					?><a onClick="show('update')">Modifier</a><br/><?php
-					echo '<a href="../deletegift/'.$id.'">Supprimer</a>';
+					?><a href="../deletegift/<?php echo $id ?>" onclick="return(confirm('Etes-vous sûr de vouloir supprimer cette entrée?'));">Supprimer</a><?php
 				}
 				?></div><?php
 			}

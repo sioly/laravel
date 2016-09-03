@@ -8,7 +8,7 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-			$article = $bdd->query("SELECT * FROM location");
+			$article = $bdd->query("SELECT * FROM sale where price !=''");
 			while ($a = $article->fetch())
 			{
 				if($a['file'] != ""){
