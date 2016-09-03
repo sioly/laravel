@@ -1,0 +1,36 @@
+adaya consulting Javascript + php via indeed 29/08/2016
+
+
+
+
+
+
+Appart 
+-pellegrin non
+-4 rue pavronne lundi 14h. 14e arr : 0491299160
+- rue roger renzo marseille 8eme : 0609080451
+
+
+Code
+
+laravel
+
+composer update
+
+créer projet :
+composer create-project laravel/laravel laravel5 --prefer-dist
+
+créer connexion :
+php artisan make:auth
+
+créer migration users
+php artisan make:migration create_users_table
+
+exécuter la migration
+php artisan migrate --force
+
+créer controller:
+php artisan make:controller namecontroller
+
+créer table :
+php artisan make:migration create_users_table
